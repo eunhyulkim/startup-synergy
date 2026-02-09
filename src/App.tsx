@@ -361,13 +361,13 @@ function App() {
               </div>
             ) : (
               <div className="button-group">
-                <button
+                {/* <button
                   className="autofill-btn"
                   onClick={handleAutoFill}
                   type="button"
                 >
                   테스트 데이터 채우기
-                </button>
+                </button> */}
                 <button
                   className="submit-btn"
                   onClick={handleSubmit}
@@ -386,7 +386,7 @@ function App() {
               partner2Name={partner2.name}
             />
             <button className="reset-btn" onClick={handleReset}>
-              다시 분석하기
+              새로 창업하기
             </button>
           </>
         )}
