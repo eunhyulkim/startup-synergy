@@ -302,8 +302,8 @@ function App() {
   return (
     <div className="app">
       <header>
-        <h1>Startup Synergy</h1>
-        <p>강점 기반 창업 파트너 궁합 분석</p>
+        <h1>Entrepreneurship Synergy</h1>
+        <p>우리가 함께 창업한다면 어떨까?</p>
       </header>
 
       <main>
