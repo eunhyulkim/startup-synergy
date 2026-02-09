@@ -273,32 +273,6 @@ function App() {
     setError('')
   }
 
-  const handleAutoFill = () => {
-    setPartner1({
-      name: '김철수',
-      strengths: [
-        '전략 (Strategic)',
-        '발상 (Ideation)',
-        '미래지향 (Futuristic)',
-        '성취자 (Achiever)',
-        '행동 (Activator)',
-      ],
-    })
-    setPartner2({
-      name: '이영희',
-      strengths: [
-        '공감 (Empathy)',
-        '커뮤니케이션 (Communication)',
-        '개발 (Developer)',
-        '절친 (Relator)',
-        '화합 (Harmony)',
-      ],
-    })
-    setBusinessIdea(
-      'AI 기반 멘탈 헬스케어 앱. 사용자의 감정 상태를 분석하고 맞춤형 명상, 상담 연결, 자기계발 콘텐츠를 제공하는 서비스.',
-    )
-  }
-
   return (
     <div className="app">
       <header>
