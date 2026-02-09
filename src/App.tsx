@@ -325,7 +325,7 @@ function App() {
             <div className="business-idea">
               <h2>창업 아이템</h2>
               <textarea
-                placeholder="어떤 사업을 하려고 하나요? 자세히 적을수록 좋습니다."
+                placeholder="어떤 사업을 하려고 하나요? 자세히 적을수록 좋아요."
                 value={businessIdea}
                 onChange={(e) => setBusinessIdea(e.target.value)}
                 rows={4}
