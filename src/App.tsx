@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { STRENGTHS } from './data/strengths'
+import { Conference } from './pages/Conference'
 import './App.css'
 
 interface Partner {
@@ -217,7 +218,7 @@ function ResultCard({
   )
 }
 
-function App() {
+function SynergyApp() {
   const [partner1, setPartner1] = useState<Partner>({
     name: '',
     strengths: ['', '', '', '', ''],
@@ -335,13 +336,6 @@ function App() {
               </div>
             ) : (
               <div className="button-group">
-                {/* <button
-                  className="autofill-btn"
-                  onClick={handleAutoFill}
-                  type="button"
-                >
-                  테스트 데이터 채우기
-                </button> */}
                 <button
                   className="submit-btn"
                   onClick={handleSubmit}
@@ -371,6 +365,22 @@ function App() {
       </footer>
     </div>
   )
+}
+
+function App() {
+  const [page, setPage] = useState(window.location.hash || '#/')
+
+  useEffect(() => {
+    const handleHashChange = () => setPage(window.location.hash || '#/')
+    window.addEventListener('hashchange', handleHashChange)
+    return () => window.removeEventListener('hashchange', handleHashChange)
+  }, [])
+
+  if (page === '#/conference') {
+    return <Conference />
+  }
+
+  return <SynergyApp />
 }
 
 export default App
