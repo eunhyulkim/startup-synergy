@@ -487,6 +487,7 @@
   aspect-ratio: 1 / 1;
   overflow: hidden;
   background: linear-gradient(135deg, var(--conf-gray-100) 0%, var(--conf-gray-200) 100%);
+  border-radius: var(--conf-radius-xl) var(--conf-radius-xl) 0 0;
 }
 
 .conf-speaker-image {
@@ -519,6 +520,15 @@
   font-size: 0.875rem;
   color: var(--conf-gray-500);
   margin-top: 0.25rem;
+}
+
+.conf-speaker-participants {
+  padding: 0 1.25rem 1rem;
+  margin-top: -0.75rem;
+  font-size: 0.75rem;
+  color: var(--conf-gray-500);
+  text-align: left;
+  text-transform: capitalize;
 }
 
 /* ===== Speaker Modal ===== */

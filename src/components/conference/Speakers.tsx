@@ -59,6 +59,11 @@ export function Speakers() {
                       <span className="conf-speaker-title">{speaker.title}</span>
                     )}
                   </div>
+                  {speaker.participants && (
+                    <div className="conf-speaker-participants">
+                      {speaker.participants.join(', ')}
+                    </div>
+                  )}
                 </button>
               ))}
             </div>
