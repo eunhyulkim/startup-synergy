@@ -667,6 +667,11 @@
   text-align: left;
   min-height: 44px;
   outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.conf-faq-question:focus {
+  outline: none;
 }
 
 .conf-faq-question:focus-visible {
