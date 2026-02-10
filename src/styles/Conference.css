@@ -450,6 +450,7 @@
   text-align: left;
   font: inherit;
   outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .conf-speaker-card:focus-visible {
