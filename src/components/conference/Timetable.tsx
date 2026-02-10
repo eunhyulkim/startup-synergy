@@ -1,5 +1,5 @@
-import { timetable, getEntryEndTime } from '../../data/timetable';
-import { speakerMap } from '../../data/speakers';
+import { timetable } from '../../data/timetable'
+import { speakerMap } from '../../data/speakers'
 
 export function Timetable() {
   return (
@@ -9,11 +9,11 @@ export function Timetable() {
 
       <div className="conf-timetable-list">
         {timetable.map((entry) => {
-          const isBreak = entry.type === 'break';
+          const isBreak = entry.type === 'break'
           const speakers = entry.speakerIds
-            ?.map(id => speakerMap.get(id)?.name)
+            ?.map((id) => speakerMap.get(id)?.name)
             .filter(Boolean)
-            .join(', ');
+            .join(', ')
 
           return (
             <div
@@ -24,7 +24,9 @@ export function Timetable() {
               <div className="conf-timetable-content">
                 <span className="conf-timetable-title">{entry.title}</span>
                 {entry.description && (
-                  <span className="conf-timetable-description">{entry.description}</span>
+                  <span className="conf-timetable-description">
+                    {entry.description}
+                  </span>
                 )}
                 {speakers && (
                   <span className="conf-timetable-speakers">{speakers}</span>
@@ -34,9 +36,9 @@ export function Timetable() {
                 {entry.duration}min
               </span>
             </div>
-          );
+          )
         })}
       </div>
     </section>
-  );
+  )
 }
