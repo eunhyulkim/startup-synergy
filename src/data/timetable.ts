@@ -108,7 +108,7 @@ export const timetable: TimetableEntry[] = [
     startTime: '17:40',
     duration: 20,
     type: 'closing',
-    title: '클로징',
+    title: '디브리핑',
     description: '우리에게 필요한 일의 감각이 있다면',
   },
 ];
