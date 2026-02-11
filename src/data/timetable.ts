@@ -1,14 +1,14 @@
-export type SessionType = 'opening' | 'session' | 'break' | 'closing';
+export type SessionType = 'opening' | 'session' | 'break' | 'closing'
 
 export interface TimetableEntry {
-  id: string;
-  startTime: string;
-  duration: number;
-  type: SessionType;
-  title: string;
-  description?: string;
-  partId?: number;
-  speakerIds?: string[];
+  id: string
+  startTime: string
+  duration: number
+  type: SessionType
+  title: string
+  description?: string
+  partId?: number
+  speakerIds?: string[]
 }
 
 export const timetable: TimetableEntry[] = [
@@ -28,11 +28,11 @@ export const timetable: TimetableEntry[] = [
     description: '우리는 어쩌다 이렇게 모였을까',
   },
   {
-    id: 't-dlift',
+    id: 't-drift',
     startTime: '14:15',
     duration: 65,
     type: 'session',
-    title: 'Dlift Activity',
+    title: 'Drift Activity',
     description: '만일 외딴 섬에 함께 떨어진다면',
   },
   {
@@ -111,12 +111,12 @@ export const timetable: TimetableEntry[] = [
     title: '디브리핑',
     description: '우리에게 필요한 일의 감각이 있다면',
   },
-];
+]
 
 export const getEntryEndTime = (entry: TimetableEntry): string => {
-  const [hours, minutes] = entry.startTime.split(':').map(Number);
-  const totalMinutes = hours * 60 + minutes + entry.duration;
-  const endHours = Math.floor(totalMinutes / 60);
-  const endMins = totalMinutes % 60;
-  return `${String(endHours).padStart(2, '0')}:${String(endMins).padStart(2, '0')}`;
-};
+  const [hours, minutes] = entry.startTime.split(':').map(Number)
+  const totalMinutes = hours * 60 + minutes + entry.duration
+  const endHours = Math.floor(totalMinutes / 60)
+  const endMins = totalMinutes % 60
+  return `${String(endHours).padStart(2, '0')}:${String(endMins).padStart(2, '0')}`
+}
