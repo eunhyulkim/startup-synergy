@@ -277,13 +277,18 @@ function SynergyApp() {
   return (
     <div className="app">
       <header>
-        <h1>Entrepreneurship Synergy</h1>
-        <p>우리가 함께 창업한다면 어떨까?</p>
+        <h1>AI 창업 시뮬레이터</h1>
+        <p>우리는 어디까지 갈 수 있을까</p>
       </header>
 
       <main>
         {!result ? (
           <>
+            <p className="intro-guide">
+              두 사람의 강점혁명 검사결과와 창업 아이템을 입력하면 어느
+              시리즈까지 갈 수 있을지, 어떤 시너지를 만들 수 있을지, 어떤 기쁨과
+              슬픔을 겪게 될지 일 궁합에 대해 알 수 있어요.
+            </p>
             <div className="partners-container">
               <PartnerForm
                 label="파트너 1"
